@@ -3,6 +3,8 @@ import React from "react";
 import { baseURL } from "../../stores/api";
 
 const ShopItem = ({ shop }) => {
+  console.log(shop);
+  console.log(shop.image);
   return (
     <View>
       <Text>{shop.name}</Text>
