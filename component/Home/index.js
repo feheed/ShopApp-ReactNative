@@ -1,8 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import { NativeBaseProvider, Text, Image, Button } from "native-base";
-
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <NativeBaseProvider>
       <View>
@@ -19,6 +18,12 @@ const Home = () => {
           }}
         >
           Open me
+        </Button>
+        <Button
+          backgroundColor={"black"}
+          onPress={() => navigation.navigate("Shop")}
+        >
+          Click here to skip
         </Button>
       </View>
     </NativeBaseProvider>

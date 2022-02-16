@@ -1,15 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-
-import ShopList from "./component/Shop/ShopList";
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./component/Navigation/StackNavigation";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello! sir</Text>
-      <ShopList />
+    <NavigationContainer>
+      <StackNavigator />
+
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 

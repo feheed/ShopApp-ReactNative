@@ -1,12 +1,18 @@
 import React from "react";
-import shopStore from "../stores/shopStore";
+import { View, Image, Text } from "react-native";
+import shopStore from "../../stores/shopStore";
+import { baseURL } from "../../stores/api";
 const ShopDetail = () => {
-  const shop = shopStore.shops[0];
+  const shop = shopStore.shops[1];
+  console.log(shop);
+  console.log(baseURL + shop.image);
   return (
     <View>
-      <Image source={{ uri: baseURL + shop.image }} />
       <Text>{shop.name}</Text>
-      <ProductsList products={shop.products} />
+      <Image
+        style={{ height: 100, width: 100 }}
+        source={{ uri: baseURL + shop.image }}
+      />
     </View>
   );
 };
